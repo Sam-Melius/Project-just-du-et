@@ -1,5 +1,4 @@
-
-:root {
+/* add home page styles here */:root {
     --title: rgb(54, 64, 82); 
     --card-background: white;
     --text: rgb(113, 48, 48);
@@ -30,6 +29,7 @@ html, body {
     padding: 0;
     margin: 0;
     animation: pulse 18s infinite alternate;
+
 }
 
 .nav {
@@ -41,29 +41,28 @@ html, body {
     margin-top: 1rem;
 }
 
-
 .profile {
     cursor: pointer;
     background-color: var(--card-background);
     margin: .5rem;
-    padding: 0rem 1rem 1rem 1rem;
+    padding: 0rem .25rem 1rem 1rem;
     color: var(--text);
     border: var(--border) 2px solid;
-    width: 12rem;
+    width: 18rem;
 }
 
-.profiles-container {
+.profile-container {
     display: flex;
     flex-direction: column;
-    margin: 20px;
+    align-items: center;
+    margin-top: 8rem;
 }
 
 .title h3 {
     padding: 0;
     margin: 0; 
-    margin-top: 1rem;
     margin-right: .8rem;
-    margin-bottom: 1rem;
+    margin-top: 1rem;
     font-family: 'Yatra One', sans-serif;
     font-size: 2rem;
     text-transform: uppercase;
@@ -77,8 +76,17 @@ html, body {
    text-transform: uppercase;
 }
 
+.location {
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: .85rem;
+    letter-spacing: .1rem;
+    text-transform: lowercase;
 
-.talents {
+}
+
+.talents, .about {
     font-family: 'Lato', sans-serif;
     font-style: italic;
     font-weight: 400;
@@ -129,10 +137,12 @@ html, body {
     cursor: pointer;
 }
 
-
-.bottom {
-    margin-top: 8rem;
-    /* width: 100%; */
+textarea {
+    resize: none;
+    color: var(--text);
+    height: 4rem;
+    border: var(--border) 2px solid;
+    width: 18rem;
 }
 
 .main {
@@ -149,36 +159,22 @@ html, body {
 }
 
 .message {
-    border: pink 3px solid;
-}
-
-.form {
+    border: var(--border) 2px solid;
+    background-color: white;
     font-family: 'Lato', sans-serif;
     font-style: italic;
-    font-weight: 300;
-    letter-spacing: .15rem;
+    font-weight: 400;
+    font-size: .85rem;
+    letter-spacing: .1rem;
     text-transform: lowercase;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: center;
-    color: var(--title);
+    padding-left: 1rem;
+    color: var(--text);
+    width: 18rem;
+    margin-bottom: .8rem;
 }
 
-.edit-form {
-    font-family: 'Lato', sans-serif;
-    font-style: italic;
-    font-weight: 300;
-    letter-spacing: .15rem;
-    text-transform: lowercase;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: flex-end;
-    color: var(--title);
-}
 
-.form button, .edit-form button {
+button {
     color: var(--text);
     background-color: var(--border);
     border: none;
@@ -189,19 +185,14 @@ html, body {
     margin:.2rem;
 }
 
-#search-button {
-    color: var(--text);
-    background-color: var(--border);
-    border: none;
-    padding: .2rem;
-    font-family: 'Lato', sans-serif;
-    font-style: italic;
-    text-transform: lowercase;
-    letter-spacing: .1rem;
-    margin: 0rem;
+.message-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
-.form input, .search-form input, .edit-form input {
+.message-form input {
     color: var(--text);
     margin: .2rem;
     padding: .2rem;
@@ -210,26 +201,41 @@ html, body {
     letter-spacing: .1rem;
     text-transform: lowercase;
     border: none;
-    
 }
 
-.about-cards {
-    margin-top: 4rem;
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
-.full-profile {
-    margin-top: 20rem;
+.left { 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+
 }
 
-@media only screen and (min-width: 600px) {
+#edit-profile-button {
+    margin-left: .5rem;
+}
 
-    .profiles-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 20px;
+@media only screen and (min-width: 620px) {
 
+    .left {
+        position: fixed;
+        padding-right: 20rem;
+        margin-top: 3rem;
+    }
+
+    .right {
+        position: fixed;
+        padding-left: 20rem;
+        margin-top: 10.5rem;
     }
 
     .title h3 {
