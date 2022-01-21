@@ -1,0 +1,114 @@
+
+:root {
+    --title: rgb(54, 64, 82); 
+    --card-background: white;
+    --text: rgb(113, 48, 48);
+    --border: rgb(233, 224, 245);
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: rgb(250, 237, 237);
+    }
+    50% {
+        background-color: rgb(254, 251, 241);
+    }
+    100% {
+        background-color: rgb(241, 251, 255);
+    }
+
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    animation: pulse 18s infinite alternate;
+}
+
+
+.title h3 {
+    padding: 0;
+    margin: 4rem 1rem 2rem 1rem;
+    font-family: 'Yatra One', sans-serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    color: var(--title);
+    display: flex;
+    justify-content: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.form {
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    letter-spacing: .15rem;
+    text-transform: lowercase;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    color: var(--title);
+}
+
+.form button {
+    color: var(--text);
+    background-color: var(--border);
+    border: none;
+    padding: .2rem;
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    text-transform: lowercase;
+    letter-spacing: .1rem;
+    margin:.2rem;
+}
+
+.form input {
+    color: var(--text);
+    margin: .2rem;
+    padding: .2rem;
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    letter-spacing: .1rem;
+    text-transform: lowercase;
+    border: none;
+}
+
+@media only screen and (min-width: 600px) {
+
+    .main {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    
+    .auth-container {
+        margin: 2rem;
+    }
+
+    #sign-up {
+        margin-top: 5.2rem;
+    }
+   
+    .title h3 {
+        font-size: 4rem;
+    }
+  
+    
+  }
